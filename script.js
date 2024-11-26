@@ -55,7 +55,7 @@ function applyBlur() {
     const tempData = new Uint8ClampedArray(data);
     const width = editedCanvas.width;
     const height = editedCanvas.height;
-    const radius = 2;
+    const radius = 4;
 
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {

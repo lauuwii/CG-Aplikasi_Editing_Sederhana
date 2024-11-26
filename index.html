@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Image Editor</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        #canvas-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        canvas {
+            border: 1px solid black;
+            width: 400px;
+            height: 300px;
+        }
+        #controls {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="file-upload" accept="image/*" />
+    <div id="controls">
+        <select id="effect-selector">
+            <option value="grayscale">Grayscale</option>
+            <option value="blur">Blur</option>
+        </select>
+        <button onclick="applySelectedEffect()">Apply</button>
+    </div>
+    <div id="canvas-container">
+        <canvas id="canvas-original"></canvas>
+        <canvas id="canvas-edited"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
